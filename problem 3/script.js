@@ -16,8 +16,16 @@ let el = "";
 const ul = document.getElementById("numbers");
 
 for (let i = 0; i < 100; i++) {
-  el += `<li>${i + 1}</li>`;
-  console.log(i + 1); //Showing results in console
+  if ((i + 1) % 3 == 0) {
+    el += `<li>Fizz</li>`;
+    console.log("Fizz"); //Showing results in console
+  } else if ((i + 1) % 5 == 0) {
+    el += `<li>Buzz</li>`;
+    console.log("Buzz"); //Showing results in console
+  } else {
+    el += `<li>${i + 1}</li>`;
+    console.log(i + 1); //Showing results in console
+  }
 }
 
 ul.innerHTML = el; //Printing the numbers in the DOM here.
