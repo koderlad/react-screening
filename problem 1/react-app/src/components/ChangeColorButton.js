@@ -26,13 +26,20 @@ function ChangeColorButton() {
   }, [colorHistory]);
 
   const handleClick = () => {
-    console.log({ currentColor });
     colorDispatcher({ type: "ADD_COLOR", color: currentColor });
   };
 
   return (
     <>
       <button onClick={handleClick}>CHANGE COLOR</button>
+      <div>
+        {colorHistory.map((color, index) => (
+          <span key={index} style={{ color }}>
+            {index === 0 ? "" : ", "}
+            {color}
+          </span>
+        ))}
+      </div>
     </>
   );
 }
