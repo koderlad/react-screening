@@ -16,7 +16,10 @@ let el = "";
 const ul = document.getElementById("numbers");
 
 for (let i = 0; i < 100; i++) {
-  if ((i + 1) % 3 == 0) {
+  if ((i + 1) % 3 == 0 && (i + 1) % 5 == 0) {
+    el += `<li>FizzBuzz</li>`;
+    console.log("FizzBuzz"); //Showing results in console
+  } else if ((i + 1) % 3 == 0) {
     el += `<li>Fizz</li>`;
     console.log("Fizz"); //Showing results in console
   } else if ((i + 1) % 5 == 0) {
