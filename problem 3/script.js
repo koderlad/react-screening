@@ -15,19 +15,19 @@ However, for numbers which are multiples of both three and five print “ FizzBu
 let el = "";
 const ul = document.getElementById("numbers");
 
-for (let i = 0; i < 100; i++) {
-  if ((i + 1) % 3 == 0 && (i + 1) % 5 == 0) {
+for (let i = 1; i <= 100; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
     el += `<li>FizzBuzz</li>`;
     console.log("FizzBuzz"); //Showing results in console
-  } else if ((i + 1) % 3 == 0) {
+  } else if (i % 3 === 0) {
     el += `<li>Fizz</li>`;
     console.log("Fizz"); //Showing results in console
-  } else if ((i + 1) % 5 == 0) {
+  } else if (i % 5 === 0) {
     el += `<li>Buzz</li>`;
     console.log("Buzz"); //Showing results in console
   } else {
-    el += `<li>${i + 1}</li>`;
-    console.log(i + 1); //Showing results in console
+    el += `<li>${i}</li>`;
+    console.log(i); //Showing results in console
   }
 }
 
